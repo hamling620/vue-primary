@@ -35,6 +35,8 @@ patchToMethods.forEach(method => {
     if (inserted) {
       ob.observeArray(inserted)
     }
+    // 通知数组更新
+    ob.dep.notify()
     return result
   })
 })
